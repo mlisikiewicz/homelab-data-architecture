@@ -59,5 +59,5 @@ graph TD
     end
 
     subgraph Kids Network
-        AP -.-> KidsWiFi["Mini-WiFi (Kids' Devices)"]:::client
+        AP -.-> KidsWiFi["Kid's Devices (Mini WiFi)"]:::client
     end
