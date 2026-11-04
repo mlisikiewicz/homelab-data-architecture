@@ -55,4 +55,5 @@ graph TD
 
     subgraph Isolated IoT Network
         AP -.-> Printer["HP LaserJet Printer"]:::client
+        AP -.-> SmartDevices["Misc Smart Devices (Plugs, Bulbs, Sensors)"]:::client
     end
