@@ -42,7 +42,7 @@ graph TD
     subgraph UniFi Network Infrastructure
         USG --> CK["Cloud Key Gen2 Plus"]:::router
         USG --> Switch["8-Port PoE Switch"]:::router
-        Switch --> AP["Wi-Fi Access Points (Free Wi-Fi)"]:::client
+        Switch --> AP["Wi-Fi Access Points (Free WiFi)"]:::client
     end
 
     subgraph Proxmox Server
@@ -56,4 +56,5 @@ graph TD
     subgraph Isolated IoT Network
         AP -.-> Printer["HP LaserJet Printer"]:::client
         AP -.-> SmartDevices["Misc Smart Devices (Plugs, Bulbs, Sensors)"]:::client
+        AP -.-> KidsWiFi["Mini-WiFi (Kids' Devices)"]:::client
     end
