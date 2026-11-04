@@ -21,10 +21,17 @@ Network segmentation is critical for isolating IoT devices from core data traffi
 
 ---
 
-## 📊 Data Pipelines & Information Management
-Just like a supply chain inventory system, a robust homelab requires strict data governance, automated tracking, and clean metadata synchronization:
-* **Automated Indexing & Metadata Enrichment:** Manages structured relational metadata for thousands of media and document assets, resolving automated ID mismatches and enforcing strict folder hierarchies.
-* **Backup & Recovery Workflows:** Utilizes regular Proxmox snapshotting and container backups to ensure zero data loss during system updates.
+## 💾 Data Pipelines & Storage Architecture
+
+In any robust data or supply chain environment, protecting system integrity while managing high-throughput data flows is critical. This infrastructure is architected to eliminate single points of failure and protect boot volumes from excessive read/write wear:
+
+* **Storage Tiering & Isolation:** 
+  * **Boot / System Drive:** Isolated strictly to a lightweight hypervisor boot volume to prevent unnecessary write fatigue.
+  * **Secondary High-Performance Tier:** All heavy input/output (I/O) workloads—including container appdata, relational databases, system logs, and media pipelines—are routed directly to a dedicated **2TB internal SSD** (`/mnt/pve/ssd2tb/`).
+* **Automated Data Ingestion & Indexing:** 
+  * Implements automated file-staging and directory mapping for media and document assets, ensuring strict folder hierarchies before downstream ingestion by services like Jellyfin and Audiobookshelf.
+* **Data Integrity & Lifecycle Management:** 
+  * Regular Proxmox snapshotting and automated container backups ensure zero data loss during system updates, mimicking enterprise disaster recovery protocols.
 
 ---
 
