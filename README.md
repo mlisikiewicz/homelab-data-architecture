@@ -68,5 +68,7 @@ graph TD
     subgraph Kids Network
         AP -.-> KidsWiFi["Kid's Devices (Mini WiFi)"]:::client
     end
+```
 ```markdown
 * Explore the full [Catch-All Container Architecture Documentation](docs/docker-catchall.md) for detailed Docker Compose configurations and storage mapping.
+```
