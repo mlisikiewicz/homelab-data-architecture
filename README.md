@@ -37,26 +37,22 @@ graph TD
     classDef client fill:#fbb,stroke:#333,stroke-width:2px;
 
     %% Nodes
-    Internet([ISP / Modem]) --> USG[UniFi USG-3P Gateway]:::router
+    Internet["ISP / Modem"] --> USG["UniFi USG-3P Gateway"]:::router
     
     subgraph UniFi Network Infrastructure
-        USG --> CK[Cloud Key Gen2 Plus]:::router
-        USG --> Switch[8-Port PoE Switch]:::router
-        Switch --> AP[Wi-Fi Access Points <br/> Main: Free Wi-Fi]:::client
+        USG --> CK["Cloud Key Gen2 Plus"]:::router
+        USG --> Switch["8-Port PoE Switch"]:::router
+        Switch --> AP["Wi-Fi Access Points (Free Wi-Fi)"]:::client
     end
 
-    subgraph Dell Optiplex Proxmox Node (homelab)
-        Switch --> Proxmox[Proxmox VE Hypervisor <br/> Boot: 128GB USB / Storage: 2TB SSD]:::server
+    subgraph Proxmox Server
+        Switch --> Proxmox["Proxmox VE Hypervisor"]:::server
         
-        Proxmox --> Jellyfin[LXC 101: Jellyfin Media Server]
-        Proxmox --> CatchAll[LXC 102: Catch-All Apps & Docker]
-        Proxmox --> HA[VM: Home Assistant]
+        Proxmox --> Jellyfin["LXC 101: Jellyfin"]
+        Proxmox --> CatchAll["LXC 102: Catch-All Apps"]
+        Proxmox --> HA["VM: Home Assistant"]
     end
 
     subgraph Isolated IoT Network
-        AP -.-> Printer[HP LaserJet MFP M234sdw <br/> Isolated VLAN]:::client
+        AP -.-> Printer["HP LaserJet Printer"]:::client
     end
-
-    %% Connections
-    style Internet fill:#e1d5e7,stroke:#9673a6,stroke-width:2px
-```
