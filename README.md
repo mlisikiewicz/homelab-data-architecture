@@ -30,11 +30,11 @@ Just like a supply chain inventory system, a robust homelab requires strict data
 
 ```mermaid
 graph TD
-    %% Styling Classes
-    classDef internet fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef router fill:#bbf,stroke:#333,stroke-width:2px;
-    classDef server fill:#bfb,stroke:#333,stroke-width:2px;
-    classDef client fill:#fbb,stroke:#333,stroke-width:2px;
+    %% Styling Classes with High-Contrast Text
+    classDef internet fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000;
+    classDef router fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#000;
+    classDef server fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#000;
+    classDef client fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#000;
 
     %% Nodes
     Internet["ISP / Modem"] --> USG["UniFi USG-3P Gateway"]:::router
