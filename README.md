@@ -71,4 +71,5 @@ graph TD
 ```
 ```markdown
 * Explore the full [Catch-All Container Architecture Documentation](docs/docker-catchall.md) for detailed Docker Compose configurations and storage mapping.
+* Explore the full [Home Assistant VM Architecture Documentation](docs/home-assistant.md) for details on virtual machine resource allocation and local automation governance.
 ```
