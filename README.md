@@ -74,4 +74,5 @@ graph TD
 * Explore the full [Home Assistant VM Architecture Documentation](docs/home-assistant.md) for details on virtual machine resource allocation and local automation governance.
 * Explore the full [Jellyfin Media Server Documentation](docs/jellyfin-container.md) for details on media streaming isolation and high-throughput SSD storage mapping.
 * Explore the full [UniFi Network Topology & VLAN Documentation](docs/network-topology.md) for details on hardware segmentation, firewall rules, and VLAN security.
+* Explore the full [Data Pipelines & Storage Architecture Documentation](docs/data-pipelines.md) for details on storage tiering, hardware isolation, and data recovery workflows.
 ```
